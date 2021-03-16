@@ -1,20 +1,24 @@
 {
-  "name": "node-hello",
+  "name": "hello",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple node.js app that servers \"hello world\"",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnpapa/node-hello.git"
+    "url": "git+https://github.com/BALAGA-GAYATRI/node-hello.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/johnpapa/node-hello/issues"
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
   },
-  "homepage": "https://github.com/johnpapa/node-hello#readme"
+  "bugs": {
+    "url": "https://github.com/BALAGA-GAYATRI/node-hello/issues"
+  },
+  "homepage": "https://github.com/BALAGA-GAYATRI/node-hello#readme"
 }
