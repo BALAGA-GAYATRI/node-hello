@@ -7,6 +7,7 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node!\n'
   res.end(msg);
+  res.end(process.env.GITHUB_ACTOR);
 });
 
 server.listen(port, () => {
