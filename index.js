@@ -1,3 +1,7 @@
+// import * as core from '@actions/core';
+// import * as exec from '@actions/exec';
+// import * as io from '@actions/io';
+
 const  core = require('@actions/core');
 const github = require('@actions/github');
 const http = require('http');
@@ -12,5 +16,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
+  console.log(process.env)
   console.log(`Server running on http://localhost:${port}/`);
 });
