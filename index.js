@@ -7,7 +7,8 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node!\n'
   res.end(msg);
-  res.end(process.env.GITHUB_ACTOR);
+  const author = process.env.GITHUB_ACTOR;
+  res.end(`author is : ${author}`);
 });
 
 server.listen(port, () => {
