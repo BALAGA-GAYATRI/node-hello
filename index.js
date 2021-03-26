@@ -13,6 +13,8 @@ const server = http.createServer((req, res) => {
   const author = process.env.GITHUB_ACTOR;
   // res.end(msg);
   res.end(`author is : ${author}`);
+  
+  console.log(process.env)
 });
 
 server.listen(port, () => {
