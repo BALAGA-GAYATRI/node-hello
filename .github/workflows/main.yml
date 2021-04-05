@@ -14,6 +14,7 @@ env:
   AZURE_WEBAPP_NAME: hello-world-node-app    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
+  GITHUB_MESSAGE : ${{ github.event.head_commit.message }}
 
 jobs:
   build-and-deploy:
@@ -37,12 +38,13 @@ jobs:
         npm run test --if-present
     - name: 'Deploy to Azure WebApp'
       uses: balaga-gayatri/webapps-deploy@message_issue
-      env: 
-        GITHUB_MESSAGE : ${{ github.event.head_commit.message }}
+      
       with: 
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+  # env: 
+  #       GITHUB_MESSAGE : ${{ github.event.head_commit.message }}
         
   # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
   # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
