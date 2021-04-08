@@ -37,7 +37,7 @@ jobs:
         npm run build --if-present
         npm run test --if-present
     - name: 'Deploy to Azure WebApp'
-      uses: balaga-gayatri/webapps-deploy@message_issue
+      uses: Azure/webapps-deploy@users/balaga-gayatri/commit-message-fix
       
       with: 
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
