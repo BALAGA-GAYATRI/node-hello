@@ -37,7 +37,7 @@ jobs:
         npm run build --if-present
         npm run test --if-present
     - name: 'Deploy to Azure WebApp'
-      uses: Azure/webapps-deploy@users/balaga-gayatri/commit-message-fix
+      uses: balaga-gayatri/webapps-deploy@message_issue
       
       with: 
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
@@ -48,3 +48,4 @@ jobs:
         
   # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
   # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
+  # Azure/webapps-deploy@users/balaga-gayatri/commit-message-fix
