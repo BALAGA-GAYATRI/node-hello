@@ -1,7 +1,7 @@
 name: Deploy Node.js to Azure Web App
 
 on:
-  [push]
+  [workflow_dispatch]
 
 # CONFIGURATION
 # For help, go to https://github.com/Azure/Actions
@@ -49,3 +49,4 @@ jobs:
   # For more information on GitHub Actions for Azure, refer to https://github.com/Azure/Actions
   # For more samples to get started with GitHub Action workflows to deploy to Azure, refer to https://github.com/Azure/actions-workflow-samples
   ## Azure/webapps-deploy@users/balaga-gayatri/commit-message-fix
+
